@@ -1,0 +1,19 @@
+label {
+    font-weight: bold;
+    color: rgb(33, 147, 228);
+    background-color: black;
+    display: block;
+    margin-bottom: 10px;
+    width:fit-content ;
+    margin-top: 10px;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: none;
+}

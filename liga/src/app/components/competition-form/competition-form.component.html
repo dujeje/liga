@@ -1,0 +1,33 @@
+<form [formGroup]="competitionForm" (ngSubmit)="saveCompetition()">
+  <label for="competition-name">Naziv natjecanja:</label>
+  <input
+    type="text"
+    id="competition-name"
+    name="competition-name"
+    formControlName="competitionName"
+    required
+  />
+
+  <label for="competitors"
+    >Popis natjecatelja (odvojeno zarezima ili novim redovima):</label
+  >
+  <textarea
+    id="competitors"
+    name="competitors"
+    formControlName="competitors"
+    required
+  ></textarea>
+
+  <label for="scoring-system">Sustav bodovanja (npr. 3/1/0):</label>
+  <input
+    type="text"
+    id="scoring-system"
+    name="scoring-system"
+    formControlName="scoringSystem"
+    required
+  />
+
+  <button type="submit" [disabled]="competitionForm.invalid">
+    Spremi natjecanje
+  </button>
+</form>

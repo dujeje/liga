@@ -1,0 +1,24 @@
+<!--<app-login-button *ngIf="!(isAuthenticated$ | async)"></app-login-button>
+<router-outlet></router-outlet>-->
+
+<div id="app" class="d-flex flex-column h-100">
+  <div class="container" *ngIf="isLoading | async; else loaded">
+    <app-loading></app-loading>
+  </div>
+
+  <ng-template #loaded>
+    <app-nav-bar></app-nav-bar>
+
+    <div class="container flex-grow-1">
+      <div class="mt-5">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <app-login-button *ngIf="!(isAuthenticated$ | async)"></app-login-button>
+    <app-logout-button *ngIf="isAuthenticated$ | async"></app-logout-button>
+    <app-competition-form
+      *ngIf="isAuthenticated$ | async"
+    ></app-competition-form>
+  </ng-template>
+</div>
