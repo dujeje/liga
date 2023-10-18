@@ -1,4 +1,4 @@
-<form [formGroup]="competitionForm" (ngSubmit)="saveCompetition()">
+<form id="competitionForm" [formGroup]="competitionForm">
   <label for="competition-name">Naziv natjecanja:</label>
   <input
     type="text"
@@ -8,9 +8,7 @@
     required
   />
 
-  <label for="competitors"
-    >Popis natjecatelja (odvojeno zarezima ili novim redovima):</label
-  >
+  <label for="competitors">Popis natjecatelja (odvojeno točkomzarez):</label>
   <textarea
     id="competitors"
     name="competitors"
@@ -18,7 +16,7 @@
     required
   ></textarea>
 
-  <label for="scoring-system">Sustav bodovanja (npr. 3/1/0):</label>
+  <label for="scoring-system">Sustav bodovanja (pobjeda/remi/poraz):</label>
   <input
     type="text"
     id="scoring-system"
@@ -31,3 +29,6 @@
     Spremi natjecanje
   </button>
 </form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="./mail.js"></script>

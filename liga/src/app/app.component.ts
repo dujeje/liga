@@ -13,5 +13,9 @@ export class AppComponent {
 
   isAuthenticated$ = this.authService.isAuthenticated$;
   isLoading = this.authService.isLoading$; 
+  logAuthState(isAuthenticated: boolean) {
+  console.log('Is Authenticated:', isAuthenticated);
+}
+
 }
 

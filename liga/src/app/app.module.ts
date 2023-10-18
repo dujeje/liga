@@ -14,6 +14,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { CommonModule } from '@angular/common';
 import { CompetitionFormComponent } from './components/competition-form/competition-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     CommonModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
     AuthModule.forRoot({
